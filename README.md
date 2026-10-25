@@ -4,6 +4,8 @@ Transactional event-ingestion service built with **FastAPI + PostgreSQL**.
 
 The service accepts loosely shaped events, normalizes them into a canonical form, prevents duplicate processing with a deterministic fingerprint and a database-level uniqueness constraint, records processing attempts, and exposes aggregation APIs.
 
+Live demo: **<add your Render URL here>** (`/ready` for health, `/docs` for the API explorer)
+
 ## Architecture
 
 ```
