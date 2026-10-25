@@ -169,6 +169,12 @@ docker compose down -v
 docker compose up --build
 ```
 
+## Deployment
+
+Live demo: **<add your Render URL here>** (`/ready` for health, `/docs` for the API explorer)
+
+Deployed on Render from `render.yaml` (Docker web service + managed PostgreSQL). On every push to `main`, GitHub Actions runs lint and tests against PostgreSQL, builds the Docker image, and then triggers a Render deploy through a deploy hook (`RENDER_DEPLOY_HOOK_URL` repository secret). Migrations run automatically on container start.
+
 ## Configuration
 
 Copy `.env.example` to `.env` for local development.
